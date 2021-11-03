@@ -10,7 +10,8 @@ use App\Classes\Validate;
 function asset($file_path = null)
 {
     $scheme = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS']) ? 'https' : 'http';
-    return "{$scheme}://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}assets/{$file_path}";
+    $paths = explode('/', $_SERVER['REQUEST_URI']);
+    return "{$scheme}://{$_SERVER['HTTP_HOST']}/{$paths[1]}/assets/" . ltrim($file_path, '/');
 }
 
 function get_header(string $name = null)
