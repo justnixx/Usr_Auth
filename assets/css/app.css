@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset {
+  border: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+fieldset.flex {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input:not(type="checkbox"):not(type="radio"):focus {
+  outline: 1px solid #333;
+}
+
+button {
+  border: 0;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.error > small {
+  color: #e61111;
+  font-size: 12px;
+  width: 100%;
+}
+
+.app-header {
+  background-color: #fff;
+  min-height: 27px;
+  padding: 8px 0;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app-header .container.flex {
+  height: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.app-header ul {
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1114px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.status {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.h100v {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  .flex {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
