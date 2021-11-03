@@ -9,9 +9,10 @@ use App\Classes\Validate;
 
 function asset($file_path = null)
 {
+    $file_path = '/css/app.css';
     $scheme = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS']) ? 'https' : 'http';
-    $paths = explode('/', $_SERVER['REQUEST_URI']);
-    return "{$scheme}://{$_SERVER['HTTP_HOST']}/{$paths[1]}/assets/" . ltrim($file_path, '/');
+    $url = "{$scheme}://" . dirname($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) . "/assets/" . ltrim($file_path);
+    return $url;
 }
 
 function get_header(string $name = null)

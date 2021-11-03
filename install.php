@@ -8,7 +8,7 @@ $db = DB::getInstance();
 
 $sql = <<<SQL
 CREATE TABLE IF NOT EXISTS users(
-    `id` INT(11) UNSIGNED NOT NULL,
+    `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
     `username` VARCHAR(20),
     `password` VARCHAR(256),
     `email` VARCHAR(256),
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users(
     PRIMARY KEY (id)
 );
 CREATE TABLE IF NOT EXISTS users_session(
-    `id` INT(11) UNSIGNED NOT NULL,
+    `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
     `user_id` INT(11) UNSIGNED NOT NULL,
     `token` VARCHAR(64),
     PRIMARY KEY (id)
