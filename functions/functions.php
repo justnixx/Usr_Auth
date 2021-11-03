@@ -9,9 +9,17 @@ use App\Classes\Validate;
 
 function asset($file_path = null)
 {
-    $file_path = '/css/app.css';
     $scheme = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS']) ? 'https' : 'http';
-    $url = "{$scheme}://" . dirname($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) . "/assets/" . ltrim($file_path);
+    $host   = $_SERVER['HTTP_HOST'];
+    $paths  = explode('/', $_SERVER['REQUEST_URI']);
+    $url    = "{$scheme}://{$host}";
+
+    for ($i = 0; $i < (count($paths) - 1); $i++) {
+        $url .= $paths[$i] . '/';
+    }
+
+    $url .= "assets/" . ltrim($file_path);
+
     return $url;
 }
 
