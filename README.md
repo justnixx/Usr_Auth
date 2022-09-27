@@ -30,7 +30,7 @@ Usr_Auth is a simple user authentication module coded in object-oriented PHP. It
 
 ## Demo
 
-See it live at [demo.nixx.dev/logregphp](https://demo.nixx.dev/logregphp).
+See it live at [demo.nixx.dev/usr_auth](https://demo.nixx.dev/usr_auth).
 
 ## Bugs
 
