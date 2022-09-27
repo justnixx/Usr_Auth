@@ -1,6 +1,6 @@
-# LogRegPHP
+# Usr_Auth
 
-LogRegPHP is a simple authentication module coded in object-oriented PHP. It provides you with some helper classes to help you get on speed with your project.
+Usr_Auth is a simple user authentication module coded in object-oriented PHP. It provides you with some helper classes to help you get on speed with your project.
 
 ## Usage
 
